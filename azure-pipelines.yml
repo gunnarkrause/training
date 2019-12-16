@@ -35,9 +35,10 @@ steps:
     customCommand: 'run build'
   displayName: 'Build app'
 
-- task: Npm@1
-# Build application.
+- task: PublishPipelineArtifact@1
+      # Publish application artifact.
   inputs:
-    command: 'custom'
-    customCommand: 'run build'
-  displayName: 'Build app'
+      targetPath: '$(Pipeline.Workspace)'
+      artifact: 'app'
+      publishLocation: 'pipeline'
+  displayName: 'Publish artifact'
