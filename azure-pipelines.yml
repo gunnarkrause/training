@@ -31,13 +31,13 @@ stages:
       inputs:
         command: 'install'
       displayName: 'Install npm packages'
-    - task: FileTransform@1
+   # - task: FileTransform@1
       # Change configuration value.
-      inputs:
-        folderPath: '$(System.DefaultWorkingDirectory)/src/app/configuration/'
-        fileType: json
-        targetFiles: configuration.json
-      displayName: 'Change configuration value'
+   #   inputs:
+    #    folderPath: '$(System.DefaultWorkingDirectory)/src/app/configuration/'
+    #   fileType: json
+    #  targetFiles: configuration.json
+    # displayName: 'Change configuration value'
 
     - task: Npm@1
       # Build application.
