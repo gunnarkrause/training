@@ -1,5 +1,3 @@
-import * as config from "./configuration.json";
-
 export const configuration = {
   application: {
     title: 'GitHub repositories',
@@ -12,7 +10,7 @@ export const configuration = {
       gists: 'gists',
       repositories: 'repos',
       users: 'users',
-      username: config.username
+      username: 'avanade'
   },
   route: {
     name: {
